@@ -1738,3 +1738,39 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-25 21:58:36 -0400
 Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-02-25 22:26:50 -0400
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (37.6ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    1: # Sources cited: github.com/saasbook/hw3_rottenpotatoes
+    2: 
+    3: -#  This file is app/views/movies/index.html.haml
+    4: %h1 All Movies
+  app/views/movies/index.html.haml:1
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.0.0-p353@railstutorial_rails_4_0/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (48.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-02-25 22:28:05 -0400
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 83ms (Views: 69.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-25 22:28:05 -0400
+Served asset /jquery.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-25 22:28:05 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
